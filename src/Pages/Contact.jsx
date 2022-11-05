@@ -20,7 +20,7 @@ const Contact = () => {
   const [validMessage, setValidMessage] = useState(false);
   const [messageFocus, setMessageFocus] = useState(false);
 
-  const [errMssg, setErrMssg] = useState("");
+  
 
 
   useEffect(() => {
@@ -45,12 +45,7 @@ const Contact = () => {
     setValidEmail(result); //outputting a boolean
   }, [email]);
 
-  
-  useEffect(() => {
-    setErrMssg("");
-  }, [user, email, message]);
-
-  //..........................
+     //..........................
   // handleSubmit function
   const handleSubmit = async (e) => {
     e.preventDefault();
