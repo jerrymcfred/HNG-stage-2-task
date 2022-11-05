@@ -27,7 +27,7 @@ const Contact = () => {
     userRef.current.focus();
   }, []);
 
-  // an effect that tests if the username matches the regex requirements
+  // checks if username matches regex requirement
   useEffect(() => {
     const result = USER_REGEX.test(user);
     setValidUser(result);
@@ -45,7 +45,7 @@ const Contact = () => {
     setValidEmail(result); //outputting a boolean
   }, [email]);
 
-  // an effect that clears the error message when either of the dependencies changes
+  
   useEffect(() => {
     setErrMssg("");
   }, [user, email, message]);
@@ -59,7 +59,7 @@ const Contact = () => {
     setMessage("")
   };
 
-  // focus:border-2 focus:border-rose-500
+  
 
   return (
     <div className="text-left w-full m-10 md:w-3/5">
